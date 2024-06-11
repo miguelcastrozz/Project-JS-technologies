@@ -137,9 +137,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     background-color: #0d1117;
     color: #c9d1d9;
     font-family: 'Roboto', sans-serif;
-    min-height: 100vh; /* Asegura que el contenedor ocupe el alto completo de la ventana */
-    display: flex; /* Establece un contenedor flex */
-    flex-direction: column; /* Alinea los elementos hijos en una columna */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 `,sX=tn.h1`
     margin-bottom: 2rem;
     color: #e7eaf0;
@@ -147,5 +147,5 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,cX=tn.div`
     margin: 1rem auto;
     max-width: 800px;
-    flex-grow: 1; /* Hace que el contenedor de contenido se expanda para ocupar todo el espacio disponible */
+    flex-grow: 1;
 `,fX=()=>{const[e,t]=M.useState([]),r=(n,i,a)=>{const o={id:e.length+1,description:n,amount:i,isIncome:a,date:new Date};t([...e,o])};return q.jsx(lX,{children:q.jsxs(cX,{children:[q.jsx(sX,{children:"Control de gastos e ingresos"}),q.jsx(AT,{onAddExpense:r}),q.jsx(Ck,{transactions:e}),q.jsx(uX,{transactions:e})]})})};Md.createRoot(document.getElementById("root")).render(q.jsx(A.StrictMode,{children:q.jsx(fX,{})}));
