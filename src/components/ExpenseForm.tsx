@@ -1,16 +1,21 @@
+// Importamos las librerías y hooks necesarios
 import React, {useState} from 'react';
 import {Form, Button} from 'react-bootstrap';
 
+// Definimos la interfaz de las propiedades del componente
 interface ExpenseFormProps {
   onAddExpense: (description: string, amount: number, isIncome: boolean) => void;
 }
 
+// Definimos el componente ExpenseForm
 const ExpenseForm: React.FC<ExpenseFormProps> = ({onAddExpense}) => {
 
+  // Definimos los estados de los campos del formulario
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState(0);
   const [isIncome, setIsIncome] = useState(false);
 
+  // Definimos la función que se ejecuta al enviar el formulario
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onAddExpense(description, amount, isIncome);
@@ -18,6 +23,7 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({onAddExpense}) => {
     setAmount(0);
   };
 
+  // Renderizamos el formulario
   return (
     <Form onSubmit={handleSubmit} style={{marginBottom: '1rem'}}>
       <Form.Group>
@@ -42,4 +48,5 @@ const ExpenseForm: React.FC<ExpenseFormProps> = ({onAddExpense}) => {
 
 };
 
+// Exportamos el componente ExpenseForm para poder utilizarlo en otros componentes
 export default ExpenseForm;

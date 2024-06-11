@@ -1,6 +1,8 @@
+// Importamos React y styled-components
 import React from 'react';
 import styled from 'styled-components';
 
+// Definimos la interfaz de la transacción
 interface Transaction {
   id: number;
   description: string;
@@ -9,10 +11,12 @@ interface Transaction {
   date: Date;
 }
 
+// Definimos los estilos de los componentes de la tabla
 interface TransactionHistoryProps {
   transactions: Transaction[];
 }
 
+// Definimos los estilos de los componentes de la tabla
 const StyledTable = styled.table`
     background-color: #161b22;
     border-color: #30363d;
@@ -21,11 +25,13 @@ const StyledTable = styled.table`
     border-collapse: collapse;
 `;
 
+// Definimos los estilos de los componentes de la cabecera de la tabla
 const TableHead = styled.thead`
     background-color: #21262d;
     color: #c9d1d9;
 `;
 
+// Definimos los estilos de los componentes de la fila de la tabla
 const TableRow = styled.tr`
     &:nth-child(even) {
         background-color: #0d1117;
@@ -36,12 +42,13 @@ const TableRow = styled.tr`
     }
 `;
 
-// Estilos para las celdas de la tabla
+// Definimos los estilos de los componentes de los datos de la tabla
 const TableData = styled.td`
     padding: 0.5rem;
     border: 1px solid #30363d;
 `;
 
+// Definimos el componente de la tabla de transacciones
 const TransactionHistory: React.FC<TransactionHistoryProps> = ({transactions}) => {
   return (
     <div className="mb-4">
@@ -69,4 +76,5 @@ const TransactionHistory: React.FC<TransactionHistoryProps> = ({transactions}) =
   );
 };
 
+// Exportamos el componente TransactionHistory para poder utilizarlo en otros componentes
 export default TransactionHistory;
