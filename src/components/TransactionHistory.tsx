@@ -36,6 +36,7 @@ const TableRow = styled.tr`
     }
 `;
 
+// Estilos para las celdas de la tabla
 const TableData = styled.td`
     padding: 0.5rem;
     border: 1px solid #30363d;
