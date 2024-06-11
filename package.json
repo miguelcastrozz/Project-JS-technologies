@@ -1,7 +1,7 @@
 {
   "name": "tecnologias-javasript",
   "private": true,
-  "homepage": "https://miguelcastrozz.github.io/Project-JS-technologies",
+  "homepage": "http://miguelcastrozz.github.io/Project-JS-technologies",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
